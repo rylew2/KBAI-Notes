@@ -51,3 +51,34 @@ are computationally infeasible.
 - If we can cancel out (resolve) all literals we arrive at a null condition and we have proved the negation is false, so what we're trying to prove is true
 - Efficiency of RTP arises from the fact that we use `Horn Clauses` (disjunctions with at most 1 positive literal) - horn clauses allow a focus 
 of attention that allows agent to be efficient.
+
+`Lesson 13 - Planning `
+-----------------------
+- Intelligent agent maps perceptual histories into actions.
+- Planning is a powerful method for action selection (using formal logic). It is a central process for achieving multiple goals @ same time
+- Prior lesson (problem solving methods like MEA and PR) didn't tell us how to select which goal
+
+- Planning has an initial state and tries to go toward a goal state. 
+- State - Represented in formal logic ( On(robot, floor) or painted(ladder) )
+- Operator - an action that is defined through a set of pre and post conditions. Preconditions can't have any negative literal
+- Preconditions are true before operator is applied, postcondition true after operator applied
+- Operator can be applied *IFF* preconditions true 
+- Assertions are propagated to subsequent states provided the assertions aren't deleted/negated 
+
+- Planning vs. Search - In "search" we try all possible operations at every step - leading to a combinatorial explosion (very inefficient) (Ie.. the nav problem)
+- MEA used initial state and goal state to select b/w diff operators (this is one way of using control knowledge)
+- Planning, however, uses a more systematic approach of choosing b/w operators (using pre/postcondition checks, and partial order planning/detection of conflicts)
+- 2 Kinds of knowledge - 1) world knowledge (states/operators) and 2) control/tacit knowledge about operator selection. Goals provide us with control knowledge
+- Partial order plan allows us to view multiple goals and select operators using goal/control knowledge
+
+- Partial order planning can prevent conflicts by checking each precondition and seeing if it's `clobbered` by a state in another plan - if it is we promote the plan
+- Other methods (MEA, PR) would not be able to avoid clobbering conflicts
+
+-3 lessons learned: 1) knowledge is about world knowledge and control knowledge. 2)goals provide control knowledge. and 3)"Society of Mind" - multiple agents working together
+
+- Hierarchical decomposition - using a categorical operation like `Stack` and `Unstack` that are composed of multiple operations
+- This decomposition allows the agent to address complex environments by thinking at multiple levels of abstraction: 1) at the level of move operations,
+2) at the level of macro operations (stack, unstack) and 3) at higher-level operations like "sort"
+- The hope is that at any level of abstraction, the problem appears smaller/simpler
+
+
