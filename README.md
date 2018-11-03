@@ -82,3 +82,23 @@ of attention that allows agent to be efficient.
 - The hope is that at any level of abstraction, the problem appears smaller/simpler
 
 
+
+`Lesson 14 - Understanding` 
+------------------------------------------ 
+- Frames (from prior lesson) offered no way to disambiguate similar meaning
+- World offers a lot of data- and we use stories to help structure this data
+- In order to disambiguate sentences with the same word but different meanings (killed 25 proposals, killed 25 people) - we need background knowledge and some ability to diambiguate
+- 3 types of analysis: 1) lexical (categorize words in noun/verb) , 2) syntactical (categorize by structure- noun or verb phrase) and 3) semantic - meaning of each word
+- Semantic analysis is the one that allows questions to be asked and inferences to be made (KBAI focuses on semantic analysis)
+- lexical and syntactical serve/support semantic analysis
+
+- `Thematic Role System` (TRS) - the relationship of various words in a sentence. Each word takes on a thematic role (agent, verb, object, beneficiary, instrument etc..)
+- TRS is a frame system that represents actions identified by the verb - it keys off the verb and will then generate expectations of other roles needed
+- `Constraints` - used for prepositions or verbs - we know the word `by` refers to either an agent, conveyance, or location
+- Constraints don't always determine exact role of words, we use additional knowledge (ontology) to find exact meanings.
+- Ontology Hierarchy - conceptualization of the world that helps key in on exact roles of words. they are categorizations that become the vocabulary of knolwedge of the world
+- Understanding starts with bottom-up processing (categorizing words: verb, noun etc..) - that leads to queries in memory triggering top-down (using constraitns and ontology)
+
+- Limitations of Semantic Analysis - as we get more and more variations of sentences - difficult to cover all variations (12 different meanings of verb "take" )
+- Constraints helps us resolve most cases (good heuristic)
+
