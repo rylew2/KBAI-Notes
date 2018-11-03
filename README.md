@@ -102,3 +102,28 @@ of attention that allows agent to be efficient.
 - Limitations of Semantic Analysis - as we get more and more variations of sentences - difficult to cover all variations (12 different meanings of verb "take" )
 - Constraints helps us resolve most cases (good heuristic)
 
+
+
+`Lesson 15 - Common Sense Reasoning` (CSR)
+------------------------------------------ 
+- CSR about making common sense reasoning in the world by interpreting from formal structures
+- We have to disambiguate both: 1) multiple meanings of the same word ("ate") and 2) multiple words with the same meanings("ate", "consumed" "ingested)
+
+- `Primitive Actions` - map different words with same meaning to a combined usage   ate/devoured/ingested ==> Ingest (primitive)
+- Power of primitives - we specify a small number of primitives to represent a large number of stories
+- Primitive actions serve as an ontology (conecptualization of the world) of actions
+- Each primitive has a frame associated.
+- Sometimes a sentence maps into two frames - this is the "theory of humor". It's possible to even select the wrong frame, but we would soon find out from story (prior sentence or sentence after)
+- Some primitives may capture sentence in a very natural/intuitive sense, while others may are more difficult to map and may involve more effort (process of selecting a frame not always linear)
+
+- `Implied Action ` - change original word in sentence to better map to primitive
+- "John fertilized the field" ==> "John put fertilizer on the field"   (put => move-object primitive)
+- Possible to map multiple implied actions from single sentence -a nd would need multiple surrounding sentences (story understanding) to disambiguate)
+
+- `Actions/subactions` - Primitives can be decomposed into smaller stories. "Ashok put the wedge on the block" - subactions are closing fingers, and unclosing fingers
+- As implied action and subactions show, CSR is about making inferences that are not necessarily pare of the input sentence
+
+-State change frames - let us predict effect/cause of events. (Ie.. Networked frames where result => Ashok's mood is happy )
+- which verb to key state change off depends on precise rules that put value into slots
+
+-When we can't find what primitive to use - we can use a `generic primitive` like `do` 
