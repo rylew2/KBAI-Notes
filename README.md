@@ -127,3 +127,54 @@ of attention that allows agent to be efficient.
 - which verb to key state change off depends on precise rules that put value into slots
 
 -When we can't find what primitive to use - we can use a `generic primitive` like `do` 
+
+
+`Lesson 16 - Scripts`
+------------------------------------------ 
+- Knowledge representation that lets us make sense of discourse, stories, and scenes (culmination of frames and understanding
+- Have to use `stories` which allow us to make connections between seemingly disparate things (agent must make causal connections, and generate expectations in order to infer and answer questions
+
+
+- Script -  a `causally` `coherent` set of `events`
+- `Causally` - each event sets off or causes the next event. `Coherent` - causal connections make sense in the world. `Events` - primarily actions,scenes or observable events in the world
+- Stories don't come in perfect order, it's up to the agent to make sense/inferences
+
+-Parts of script: 1) entry - conditions necessary to execute script, 2)result - conditions true after script 3) props - obj involved in execution 4) roles - agents involved 5)track - variation/subclasses of particular script 6)scenes - sequence of events during execution
+- Each part of the script is a slot in the script frame
+-  Script is a large molecule representation
+- We capture what is known about a stereotypical situation for a particular scene (ie..this may vary based on restaurant or culture involved )
+
+-Instantiating script - we have a general/abstract script that gets instantiated when appropriate (ie.. agent instantiates script when entering restaurant)
+- Script is an example of ak nowledge structure composed of other knowledge structures - scripts composed of frames, and frames composed of primitives
+- Scripts generate expectations that allow us to make sense of the world (and generate more expectations)
+
+- Theory of surprise - 1)things don't happen way we expect or 2)things happen in way we're not expecting
+- Creativity is involved here if there is a novle, useful/valuable, or unexpected/surprising event
+- `Form vs Content` - form of a script tells overall prototype , while content is the specific instantiation of script
+
+- `Tracks` - variations of a particular script (similar to concept hierarchy). It is a semantic hierarchy of concepts.
+- Restaurant is tope node - cafe, fast food, casual, fine dining are all variables of the restaurant script. 
+- agent walks down hierarchy depending on conditions - first invoking restaurant script thats then invoking fast food script
+- Becomes a classification problem ==> agent has very large # of scripts and has to find one that is most useful for the current situation
+
+- MEA and planning generate a plan at runtime (using initial state and goal state) 
+- However, Scripts are compiled plans which helps the agent process in a complex environment in near real time. (MEA and planning take a long time)
+
+-Topics that help `learn a script`:
+- Semantic Net and Frames are similar. If a script is composed of frames - it's conceivable that SN can be in script
+- ICL - agent abstracts a concept from seeing different examples. ICL could develop the difference between fast food, fine dining scripts
+- Planning generate a navigation plan (using initial and goal states) - it can transfer this nav plan directly to a script w/o needing to replan route
+- CSR - can help agent learn script from primitive actions it understands (make sense of new/novel situations)
+- Topics that don't help learn a script: Prod systems - atoms of knowledge instead of molecules like scripts. Learning by recorded cases is just retrieving a case whereas scripts is an abstraction over many cases. Both are too low level of abstraction.
+
+
+-Topics that help `use a script`:
+- Problem Reduction - break script down to smaller scenes - helping catch expectation violations
+- Classification - classify which script to use based on percepts
+- Logic - put script in formal logic
+- understanding - help disambiguate similar events in diff situations
+- CBR related in the sense that it and scripts both use memory to supply answer
+- Topics not useful to use a script: GnT and MEA - problem solving methods vs scripts. Scripts are already solutions themselves and just need to be executed. CBR is also individual cases whereas scripts are abstractions
+- 
+
+
