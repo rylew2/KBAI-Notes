@@ -177,4 +177,24 @@ of attention that allows agent to be efficient.
 - Topics not useful to use a script: GnT and MEA - problem solving methods vs scripts. Scripts are already solutions themselves and just need to be executed. CBR is also individual cases whereas scripts are abstractions
 - 
 
+`Lesson 17 - Explanation Based Learning` EBL
+------------------------------------------ 
+- instead of learning new concepts, EBL is about learning connections between existing concepts
+- EBL transfers knowledge from old to new situations
+
+-IE.. "Prove an object is a cup"
+- How can an AI agent use prior knowledge to build explanation that object is a cup? We have prior knowledge of concepts: brick, briefcase, glass, bowl
+- Arrows denote causal connections
+
+-`Abstract and Transfer`: Agent works backward/recursively to prove object is a cup. We know a cup is stable and enables drinking - so we look into memory for examples of stability and drinking
+- Abstraction - look for a causal explanation and abstract only the things that are causally related. 
+- Abstraction will turn a specific example into a generic example that uses objects.
+- Brick abstraction and glass abstraction prove object is a cup. 
+
+-EBL is similar to problem reduction - breaking down into smaller/simpler problems.
+- EBL aslo similar to planning - we have open preconditions - 1) object is stable, and 2)obj enables drinking. Preconditions become levers for selecting explanatory proofs
+
+-EBL - use existing concepts by combining them in new ways - this is called `speedup learning` - its a powerful way of dealing with a large nubmer of situations 
+
+- Agent will use the minimum amount of knowledge needed to do proof. Agent opportunistically builds causal proof - it builds the proof it needs baseed on background knowledge it has
 
